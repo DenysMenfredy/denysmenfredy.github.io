@@ -1,6 +1,7 @@
 ## Who am I?
 I am a senior computer engineering student at Brazil. I work with Machine Learning and Evolutionary Computation, interested in Artificial Intelligence in general.
-Work Experience:
+
+## Work Experience:
 - Federal University Of Para
   - Scientific Initiation Program (2019):
   
