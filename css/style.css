@@ -424,11 +424,38 @@
 .projects-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
-    width: 100%;
-    height: 100%;
     margin-top: 50px;
     margin-left: 50px;
+    flex-wrap: 1;
+}
+
+.project {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #00171f;
+}
+
+.project h3 {
+    align-self: center;
+    color: var(--green);
+}
+
+.project p {
+    margin-left: 10px;
+    color: var(--medium-gray);
+    /* font-style: italic; */
+}
+
+.project a {
+    margin-left: 10px;
+    color: var(--green);
 }
