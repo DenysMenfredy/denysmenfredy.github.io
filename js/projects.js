@@ -11,16 +11,24 @@ function showProjects() {
     // });
     // fileReader.readAsText(json_file);
     let req = new XMLHttpRequest();
-    let projectsSection = document.querySelector('.projects');
+    let projectsSection = document.querySelector('.projects-list');
     req.onreadystatechange = () => {
         if(req.readyState === XMLHttpRequest.DONE) {
             if(req.status === 200) {
                 const projects = JSON.parse(req.responseText).record.Projects;
+                // let counter = 0;
                 for(let project of projects) {
                     console.log(project);
+                    // counter++;
                     let projectDiv = document.createElement('div');
                     projectsSection.appendChild(projectDiv);
                     projectDiv.className = 'project';
+                    // if (counter <= 2) {
+                    //     projectDiv.classList.add('project-left');
+                    // }
+                    // else if (counter > 2 && counter <= 4) {
+                    //     projectDiv.classList.add('project-right');
+                    // }
                     let projectTitle = document.createElement('h3');
                     projectTitle.innerText = project.title;
                     projectDiv.appendChild(projectTitle);
