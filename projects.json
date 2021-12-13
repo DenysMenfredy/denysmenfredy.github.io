@@ -1,25 +1,26 @@
 {
     "Projects": [
                 {
-                    "title": "Project1",
-                    "description": "This is a project",
-                    "start_date": "2019-01-01",
-                    "end_date": "2019-01-01",
-                    "link": "https://www.google.com",
+                    "title": "Skin Cancer Classification Project",
+                    "description": "The objective is to classify skin lesion images as malignant or benign melanoma.",
+                    "start_date": "2020-10-10",
+                    "end_date": "2020-11-03",
+                    "link": "https://github.com/DenysMenfredy/skin-cancer-classification-project",
                     "languages": [
                         "Python",
-                        "JavaScript"
+                        "Tensorflow"
                     ]
                 },
                 {
-                    "title": "Project1",
-                    "description": "This is a project",
-                    "start_date": "2019-01-01",
-                    "end_date": "2019-01-01",
-                    "link": "https://www.google.com",
+                    "title": "AIQUIZ",
+                    "description": "The goal is to develop a quiz application that gives some questions about a subject and the user has to answer them.",
+                    "start_date": "2020-11-03",
+                    "end_date": "2020-11-12",
+                    "link": "https://github.com/DenysMenfredy/aiquiz",
                     "languages": [
-                        "Python",
-                        "JavaScript"
+                        "JavaScript",
+                        "ReactJS",
+                        "NextJS"
                     ]
                 },
                 {

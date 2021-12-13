@@ -297,6 +297,7 @@
 }
 
 .section-text h1 {
+    margin-top: -10px;
     color: var(--green);
     font-size: 2.5em;
     font-weight: 500;
@@ -422,14 +423,14 @@
 }
 
 .projects-list {
-    margin-top: -120px;
+    /* margin-top: -120px; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: -15px;
 }
 
 .project {
@@ -439,12 +440,19 @@
     align-items: flex-start;
     justify-content: space-evenly;
     width: 350px;
-    height: 200px;
+    height: 180px;
     border-radius: 10px;
     background-color: #00171f;
 }
 
-.project h3 {
+.project a {
+    margin-left: 10px;
+    align-self: center;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.project a h3 {
     align-self: center;
     color: var(--green);
 }
@@ -455,8 +463,5 @@
     /* font-style: italic; */
 }
 
-.project a {
-    margin-left: 10px;
-    color: var(--green);
-}
+
 

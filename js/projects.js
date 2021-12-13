@@ -31,15 +31,17 @@ function showProjects() {
                     // }
                     let projectTitle = document.createElement('h3');
                     projectTitle.innerText = project.title;
-                    projectDiv.appendChild(projectTitle);
-                    let projectDescription = document.createElement('p');
-                    projectDescription.innerText = project.description;
-                    projectDiv.appendChild(projectDescription);
                     let projectLink = document.createElement('a');
                     projectLink.setAttribute('href', project.link);
                     projectLink.setAttribute('target', '_blank');
-                    projectLink.innerText = 'Link';
+                    // projectLink.innerText = 'Link';
+                    projectLink.appendChild(projectTitle);
                     projectDiv.appendChild(projectLink);
+                    // projectDiv.appendChild(projectTitle);
+                    let projectDescription = document.createElement('p');
+                    projectDescription.innerText = project.description;
+                    projectDiv.appendChild(projectDescription);
+                    
                     let languages = document.createElement('p');
                     languages.innerText = `Languages: ${project.languages.join(', ')}`;
                     projectDiv.appendChild(languages);
