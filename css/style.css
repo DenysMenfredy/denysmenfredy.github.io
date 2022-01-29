@@ -412,6 +412,7 @@
 }
 
 .projects {
+    scroll-behavior: smooth;
     background-color: var(--bg-black);
     font-family: 'Roboto', 'sans-serif';
     display: grid;
