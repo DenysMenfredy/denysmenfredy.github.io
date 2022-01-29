@@ -41,7 +41,9 @@ function showProjects() {
                     let projectDescription = document.createElement('p');
                     projectDescription.innerText = project.description;
                     projectDiv.appendChild(projectDescription);
-                    
+                    let area = document.createElement('p');
+                    area.innerText = `Field: ${project.area}`;
+                    projectDiv.appendChild(area);
                     let languages = document.createElement('p');
                     languages.innerText = `Languages: ${project.languages.join(', ')}`;
                     projectDiv.appendChild(languages);

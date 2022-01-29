@@ -6,6 +6,7 @@
                     "start_date": "2020-10-10",
                     "end_date": "2020-11-03",
                     "link": "https://github.com/DenysMenfredy/skin-cancer-classification-project",
+                    "area": "Machine Learning",
                     "languages": [
                         "Python",
                         "Tensorflow"
@@ -17,6 +18,7 @@
                     "start_date": "2020-11-03",
                     "end_date": "2020-11-12",
                     "link": "https://github.com/DenysMenfredy/aiquiz",
+                    "area": "Web Development",
                     "languages": [
                         "JavaScript",
                         "ReactJS",
@@ -29,6 +31,7 @@
                     "start_date": "2019-01-01",
                     "end_date": "2019-01-01",
                     "link": "https://www.google.com",
+                    "area": "Web Development",
                     "languages": [
                         "Python",
                         "JavaScript"
@@ -40,6 +43,7 @@
                     "start_date": "2019-01-01",
                     "end_date": "2019-01-01",
                     "link": "https://www.google.com",
+                    "area": "Web Development",
                     "languages": [
                         "Python",
                         "JavaScript"
@@ -51,6 +55,7 @@
                     "start_date": "2019-01-01",
                     "end_date": "2019-01-01",
                     "link": "https://www.google.com",
+                    "area": "Machine Learning",
                     "languages": [
                         "Python",
                         "JavaScript"
@@ -62,6 +67,7 @@
                     "start_date": "2019-01-01",
                     "end_date": "2019-01-01",
                     "link": "https://www.google.com",
+                    "area": "Machine Learning",
                     "languages": [
                         "Python",
                         "JavaScript"
