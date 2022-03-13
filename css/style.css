@@ -3,6 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  background-color: var(--bg-black);
 }
 
 :root {
@@ -211,8 +212,8 @@
 }
 
 .social-media-icons {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
     /* margin-right: 10px; */
     transition: all 0.3s;
@@ -458,21 +459,25 @@
     align-self: center;
     color: var(--green);
     text-decoration: none;
+    background: none;
 }
 
 .project a h3 {
     align-self: center;
     color: var(--green);
+    background: none;
 }
 
 .project p {
     margin-left: 10px;
     color: var(--medium-gray);
     /* font-style: italic; */
+    background: none;
 }
 
 
 .contact {
+    margin-top: 100px;
     background-color: var(--bg-black);
     font-family: 'Roboto', 'sans-serif';
     display: grid;
@@ -532,6 +537,7 @@
     border: 2px solid var(--top-blue);
     border-radius: 4px;
     outline: none;
+    background-color: var(--light-gray);
 }
 
 .input-field textarea {
@@ -543,6 +549,8 @@
     border: 2px solid var(--top-blue);
     border-radius: 4px;
     outline: none;
+    background-color: var(--light-gray);
+    resize: none;
 }
 
 .send-mail-btn {
@@ -585,6 +593,8 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    align-items: center;
+    justify-content: stretch;
     width: 100%;
     height: 100%;
     color: var(--light-gray);
@@ -597,20 +607,54 @@
     font-weight: bold;
     margin-top: 10px;
     font-family: 'Roboto', 'sans-serif';
-    align-self: center;
+    /* align-self: center; */
 }
 
 .contact-social-media-icons {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
-    margin: 10px;
+    width: auto;
+    margin: 30px 0px 0px 30px;
 }
+
 
 .contact-social-icon {
     width: 70px;
     height: 70px;
+    /* align-self: center; */
     /* border-radius: 50%; */
     padding: 10px;
+}
+
+.contact-social-icon img  {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+footer {
+    overflow: hidden;
+    background-color: var(--bg-black);
+    font-family: 'Roboto', 'sans-serif';
+    display: grid;
+    grid-template-rows: 100% 1fr;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-text p {
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Roboto', 'sans-serif';
+    color: var(--light-gray);
 }
