@@ -104,7 +104,7 @@
     <section id="contact" class="contact">
         <div class="contact-form">
             <h3>Send me an email</h3>
-            <form action="javascript:sendMail();" method="post">
+            <form action="https://formspree.io/f/xbjwkdll" method="POST" id="my-form">
                 <div class="input-field">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Name" required>
@@ -119,6 +119,7 @@
                 </div>
                 
                 <button class="send-mail-btn" type="submit">Send</button>
+                <p id="form-status"></p>
             </form>
         </div>
         <div class="contact-social-media">
@@ -151,46 +152,6 @@
     </footer>
 
     <script src="js/projects.js"></script>
-    <script>
-        function sendMail() {
-            alert("This functionality is not implemented yet.");
-            let name = document.getElementById('name').value;
-            let email = document.getElementById('email').value;
-            let message = document.getElementById('message').value;
-
-            console.log(name, email, message);
-
-            let xhr = new XMLHttpRequest();
-            xhr.open('POST', 'localhost:8000/send-mail');
-            xhr.setRequestHeader('Content-type', 'application/json');
-            xhr.withCredentials = false;
-            //the line below disable cors
-            xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-
-
-            const html_message = `
-                <h1>Hi! I'm ${name}.</h1>
-                <h3>I'm contacting you because I wanna work with you in a project.</h3>
-                <br>
-                <p>${message}</p>
-                <br><br>
-                <p>If you liked my proposal and want to work with me, please contact me at ${email}</p>
-            `;
-
-            xhr.send(JSON.stringify({
-                name: name,
-                email: email,
-                html_message: html_message
-            }));
-
-            xhr.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    console.log(this.responseText);
-                }
-            }
-
-
-        }
-    </script>
+    <script src="js/sendMail.js"></script>
 </body>
 </html>
