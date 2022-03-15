@@ -76,7 +76,25 @@ body {
 .logo-name a {
     text-decoration: none;
     border: 1px solid var(--top-blue);
+    transition: border-transition 0.3s;
 }
+
+.logo-name a :hover {
+    border-bottom: 1px solid var(--green);
+}
+
+@keyframes  border-transition {
+    0% {
+        border-color: #343a40;
+    }
+    50% {
+        border-color: #ffffff;
+    }
+    100% {
+        border-color: #343a40;
+    }
+}
+
 
 .grid-bottom {
     display: grid;
@@ -203,31 +221,34 @@ body {
     color: var(--light-gray);
 }
 
-.social-media {
+.home-social-media {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     align-content: center;
     align-self: center;
-    width: 120px;
+    width: 150px;
     /* border: 1px dashed var(--light-gray); */
-    margin-top: 60px;
+    margin-top: 40px;
     /* margin-left: 90px; */
-    margin-right: 60px;
+    margin-right: 50px;
+    padding: 10px;
     
 }
 
 .social-media-icons {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    padding: 10px;
     /* margin-right: 10px; */
     transition: all 0.3s;
 }
 
 .social-media-icons:hover {
     opacity: 0.7;
+    transform: scale(1.1);
 }
 
 .menu {
@@ -586,9 +607,9 @@ body {
 .contact-social-media {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
     width: 50%;
     height: 100%;
     color: var(--light-gray);
@@ -599,9 +620,9 @@ body {
 .social-media {
     display: flex;
     flex-direction: column;
-    align-self: center;
-    align-items: center;
-    justify-content: stretch;
+    align-self: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
     color: var(--light-gray);
@@ -614,7 +635,7 @@ body {
     font-weight: bold;
     margin-top: 10px;
     font-family: 'Roboto', 'sans-serif';
-    /* align-self: center; */
+    align-self: center;
 }
 
 .contact-social-media-icons {
@@ -631,6 +652,12 @@ body {
     /* align-self: center; */
     /* border-radius: 50%; */
     padding: 10px;
+    transition: all 0.3s;
+}
+
+.contact-social-icon:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
 }
 
 .contact-social-icon img  {

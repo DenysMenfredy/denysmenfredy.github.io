@@ -43,9 +43,9 @@
                 </div>
                     <div class="home-btns">
                         <button class="contact-btn">Contact me</button>
-                        <button class="see-work-btn" onClick='window.location="#projects"'>See my work</button>
+                        <button class="see-work-btn">See my work</button>
                     </div>
-                    <div class="social-media">
+                    <div class="home-social-media">
                         <a href="https://github.com/DenysMenfredy" target="blank" class="social-media-icons">
                             <img src="img/github.svg" alt="github" >
                         </a>
@@ -127,16 +127,16 @@
             <div class="social-media">
                 <h2>Follow me on social media</h2>
                 <div class="contact-social-media-icons">
-                    <a href="https://github.com/DenysMenfredy" target="blank" class="contact-social-icon social-media-icons">
+                    <a href="https://github.com/DenysMenfredy" target="blank" class="contact-social-icon">
                         <img src="https://img.icons8.com/color/48/000000/github--v1.png" />
                     </a>
-                    <a href="https://linkedin.com/in/denys-menfredy" target="blank" class="contact-social-icon social-media-icons">
+                    <a href="https://linkedin.com/in/denys-menfredy" target="blank" class="contact-social-icon">
                         <img src="https://img.icons8.com/color/48/000000/linkedin.png" />
                     </a>
-                    <a href="https://www.instagram.com/denysmenfredy/" target="blank" class="contact-social-icon social-media-icons">
+                    <a href="https://www.instagram.com/denysmenfredy/" target="blank" class="contact-social-icon">
                         <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" />
                     </a>
-                    <a href="https://twitter.com/Denys_Menfredy" target="blank" class="contact-social-icon social-media-icons">
+                    <a href="https://twitter.comsocial-media-icons/Denys_Menfredy" target="blank" class="contact-social-icon">
                         <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" />
                     </a>
                 </div>
@@ -153,5 +153,21 @@
 
     <script src="js/projects.js"></script>
     <script src="js/sendMail.js"></script>
+    <script>
+        let contactBtn = document.querySelector('.contact-btn');
+        let projectsBtn = document.querySelector('.see-work-btn');
+        console.log(contactBtn);
+        contactBtn.addEventListener('click', function(){
+            document.querySelector('.contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        projectsBtn.addEventListener('click', function(){
+            document.querySelector('.projects').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
