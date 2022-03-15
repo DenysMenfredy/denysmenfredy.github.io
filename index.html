@@ -60,6 +60,9 @@
                 </div>
             </div>
     </div>
+        <div class="grid-bottom-arrow">
+            <img src="img/arrow.png" alt="Next Section Arrow" class="arrow-home"/>
+        </div>
     </section>
     <section class="about" id="about">
         <div class="section-text">
@@ -166,6 +169,14 @@
         projectsBtn.addEventListener('click', function(){
             document.querySelector('.projects').scrollIntoView({
                 behavior: 'smooth'
+            });
+        });
+
+        let arrowHome = document.querySelector('.arrow-home');
+        console.log(arrowHome);
+        arrowHome.addEventListener('click', () => {
+            document.querySelector('.about').scrollIntoView({
+                behavior: "smooth"
             });
         });
     </script>
