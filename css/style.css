@@ -324,6 +324,11 @@ body {
      }
 }
 
+#about {
+    scroll-behavior: smooth;
+}
+
+
 .about {
     background-color: var(--bg-black);
     font-family: 'Roboto', 'sans-serif';
@@ -470,8 +475,12 @@ body {
     padding: 5px;
 }
 
-.projects {
+#projects {
     scroll-behavior: smooth;
+}
+
+.projects {
+    /* scroll-behavior: smooth; */
     background-color: var(--bg-black);
     font-family: 'Roboto', 'sans-serif';
     display: grid;
@@ -505,6 +514,7 @@ body {
     background-color: #00171f;
 }
 
+
 .project a {
     margin-left: 10px;
     align-self: center;
@@ -526,6 +536,9 @@ body {
     background: none;
 }
 
+#contact {
+    scroll-behavior: smooth;
+}
 
 .contact {
     margin-top: 100px;
