@@ -31,14 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Change directory
+      - name: Detect package manager
+        id: detect-package-manager
         run: |
           echo "${{ github.workspace }}/denysmenfredy" >> $GITHUB_DIR
           echo "Project files in ${{ GITHUB_DIR }}"
           cd $GITHUB_DIR
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
           if [ -f "${{ GITHUB_DIR }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
