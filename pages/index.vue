@@ -10,9 +10,9 @@
                 <NuxtLink to="https://linkedin.com/in/denysmenfredy" target="_blank">
                     <Icon name="uil:linkedin" color="white" size="42" />
                 </NuxtLink>
-                <NuxtLink to="#">
+                <a href="/files/resume_2024_mle.pdf" target="_blank" download="resume_2024_mle.pdf">
                     <Icon name="uil:document" color="white" size="42" />
-                </NuxtLink>
+                </a>
             </div>
         </div>
     </section>

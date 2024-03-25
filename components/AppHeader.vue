@@ -6,13 +6,13 @@
             </h1>
             <ul class="inline list-none space-x-6 justify-self-end mr-16">
                 <li class="float-left text-lg font-medium text-slate-100 hover:text-emerald-500">
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li class="float-left text-lg font-medium text-slate-100 hover:text-emerald-500">
                     <a href="#">Blog</a>
                 </li>
                 <li class="float-left text-lg font-medium text-slate-100 hover:text-emerald-500">
-                    <a href="#">About</a>
+                    <a href="/about">About</a>
                 </li>
                 <li class="float-left text-lg font-medium text-slate-100 hover:text-emerald-500">
                     <a href="#">Contact</a>
