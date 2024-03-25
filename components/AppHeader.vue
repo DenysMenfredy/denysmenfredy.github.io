@@ -9,7 +9,7 @@
                     <a href="/">Home</a>
                 </li>
                 <li class="float-left text-lg font-medium text-slate-100 hover:text-emerald-500">
-                    <a href="#">Blog</a>
+                    <a href="/blog">Blog</a>
                 </li>
                 <li class="float-left text-lg font-medium text-slate-100 hover:text-emerald-500">
                     <a href="/about">About</a>
