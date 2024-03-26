@@ -1,6 +1,7 @@
 ---
 title: 'Hello World'
 description: "First blog post"
+createdAt: "03-26-2024 12:23 PM"
 ---
 
 ::the-title
