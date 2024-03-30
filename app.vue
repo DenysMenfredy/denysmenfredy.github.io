@@ -14,7 +14,7 @@ useHead({
   ]
 })
 useSeoMeta({
-    title: "Denys Menfredy website and blog",
+    title: "Denys Menfredy",
     ogTitle: "Denys Menfredy website and blog",
     description: "This is my personal website and blog where you cand find more about me and the things that I'm currently working and learning about.",
     ogDescription: "This is my personal website and blog where you cand find more about me and the things that I'm currently working and learning about."

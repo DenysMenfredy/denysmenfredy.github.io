@@ -1,6 +1,6 @@
 <template>
     <section class="w-full h-screen flex items-center">
-        <div class="w-3/5 m-auto flex flex-col items-center justify-center space-y-8">
+        <div class="w-3/5 m-auto flex flex-col items-center justify-center space-y-8 sm:w-4/5 md:w-4/5">
             <h1 class="text-white text-7xl text-center">Hi! I'm Denys</h1>
             <p class="text-white text-2xl w-2/3 text-center">I use code to solve problems. I like to build and train machine learning models and code full-stack modern web applications. </p>
             <div class="flex space-x-6">
