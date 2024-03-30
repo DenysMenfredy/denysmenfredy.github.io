@@ -4,7 +4,7 @@
             <h1 class="self-center inline-block text-3xl font-bold ml-8 text-emerald-500 hover:text-emerald-600 sm:ml-2">
                 <NuxtLink to="/">Denys Menfredy</NuxtLink>
             </h1>
-            <nav class="hidden sm:block ">
+            <nav class="hidden sm:block ml-auto">
                 <ul class="iflex flex-wrap items-center justify-between">
                     <li 
                         v-for="(item, index) in menuItems", 
