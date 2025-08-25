@@ -49,6 +49,17 @@ const menuItems = [
     {title: "Home", href: "/"},
     {title: "Blog", href: "/blog"},
     {title: "About", href: "/about"},
-    {title: "Contact", href: "#"},
+    {title: "Contact", href: "/contact"},
 ]
 </script>
+
+
+<style scoped>
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+</style>
