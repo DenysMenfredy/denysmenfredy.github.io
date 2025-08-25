@@ -14,29 +14,20 @@ export default defineNuxtConfig({
     }
   },
   content: {
-    highlight: {
-      theme: 'github-light',
-      preload: ['json', 'js', 'ts', 'vue', 'css', 'html', 'yaml', 'bash', 'python', 'c', 'cpp'],
-      defaultTheme: 'github-light',
-      darkTheme: 'github-dark',
-    },
     build: {
       markdown: {
         toc: {
           depth: 3,
+          searchDepth: 3
         },
-        anchorLinks: {
-          depth: 3,
-          permalink: true,
-          permalinkBefore: true,
-          permalinkSymbol: '#'
-      },
-      remarkPlugins: ['remark-math', 'remark-gfm', 'remark-code-titles', 'remark-toc'],
-      rehypePlugins: ['rehype-katex', 'rehype-autolink-headings', 'rehype-slug', 'rehype-highlight'],
-      linkify: {
-        linkClassName: 'text-blue-600 hover:underline dark:text-blue-400'
-      },
-    }
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark'
+          },
+          langs: ['js', 'ts', 'vue', 'json', 'yaml', 'bash', 'css', 'html', 'cpp', 'python', 'java', 'c']
+        }
+      }
     }
   },
   modules: ['nuxt-icon', "@nuxt/image", "@nuxt/content"]
