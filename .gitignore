@@ -21,3 +21,6 @@ logs
 .env
 .env.*
 !.env.example
+
+# View tracking data
+data/views.json
