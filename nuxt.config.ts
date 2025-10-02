@@ -30,5 +30,12 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: ['nuxt-icon', "@nuxt/image", "@nuxt/content"]
+  modules: ['nuxt-icon', "@nuxt/image", "@nuxt/content", '@nuxtjs/color-mode'],
+  // @ts-expect-error color-mode module augments Nuxt config at runtime
+  colorMode: {
+    classSuffix: '',
+    preference: 'system',
+    fallback: 'light',
+    storageKey: 'dm-color-mode'
+  }
 })
