@@ -8,15 +8,19 @@
             </h1>
             
             <!-- Meta Information -->
-            <div class="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-gray-500 mb-6">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6">
                 <span>Published: {{ new Date(page.createdAt).toLocaleDateString() }}</span>
                 <span v-if="page.updatedAt" class="hidden sm:inline">•</span>
                 <span v-if="page.updatedAt" class="sm:hidden">Updated: </span>
                 <span v-if="page.updatedAt">Updated: {{ new Date(page.updatedAt).toLocaleDateString() }}</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-medium">{{ readingTime.formattedTime }}</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="text-blue-600 dark:text-blue-400 font-medium">{{ formatViewCount(viewCount) }}</span>
             </div>
             
             <!-- Description -->
-            <p v-if="page.description" class="text-lg text-gray-600 leading-relaxed mb-6">
+            <p v-if="page.description" class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 {{ page.description }}
             </p>
         </header>
@@ -27,11 +31,11 @@
         </div>
         
         <!-- Post Footer -->
-        <footer class="mt-12 pt-8 border-t border-gray-200">
+        <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-stone-700">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <NuxtLink 
                     to="/blog" 
-                    class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium transition-colors duration-200"
+                    class="inline-flex items-center text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors duration-200"
                 >
                     ← Back to Blog
                 </NuxtLink>
@@ -59,6 +63,9 @@
 </template>
 
 <script setup lang="ts">
+    import { calculateReadingTime, extractTextContent } from '~/utils/readingTime'
+    import { trackView, getViewCount, formatViewCount } from '~/utils/viewTracker'
+
     definePageMeta({
         layout: "blog"
     })
@@ -66,5 +73,41 @@
     const route = useRoute();
     const { data: page } = await useAsyncData(route.path, () => {
         return queryCollection('blog').path(route.path as string).first()
+    })
+
+    // Calculate reading time
+    const readingTime = computed(() => {
+        if (!page.value?.body) {
+            return { formattedTime: '1 min read', wordCount: 0, readingTimeMinutes: 1 }
+        }
+        
+        // Convert body to string if it's not already
+        const bodyText = typeof page.value.body === 'string' ? page.value.body : String(page.value.body)
+        const textContent = extractTextContent(bodyText)
+        return calculateReadingTime(textContent)
+    })
+
+    // View tracking
+    const viewCount = ref(0)
+    const isTrackingView = ref(false)
+
+    // Track view when page loads
+    onMounted(async () => {
+        if (page.value) {
+            try {
+                // Get current view count
+                const currentViews = await getViewCount(route.path)
+                viewCount.value = currentViews
+                
+                // Track new view
+                if (!isTrackingView.value) {
+                    isTrackingView.value = true
+                    const newViews = await trackView(route.path)
+                    viewCount.value = newViews
+                }
+            } catch (error) {
+                console.error('Failed to track view:', error)
+            }
+        }
     })
 </script>
