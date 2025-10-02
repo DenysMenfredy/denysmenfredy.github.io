@@ -1,7 +1,7 @@
 <template>
     <AppHeader />
-    <section class="w-full h-screen bg-white flex justify-center">
+    <main class="min-h-screen bg-white">
         <slot />
-    </section>
+    </main>
     <AppFooter />
 </template>

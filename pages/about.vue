@@ -8,7 +8,7 @@
                  Programming became my passion in my teens, and since then, I have continuously tried
                   to improve myself by learning and building stuff with code.
             </p>
-            <NuxtImg src="/img/me.png" class="rounded-md" width="600px" height="550px" />
+            <NuxtImg src="/img/me.jpeg" class="rounded-md" width="600px" height="550px" />
         </div>
         <div class="lg:w-1/2 w-5/6 space-y-4 flex flex-col items-center lg:items-start">
             <h1 class="lg:w-2/3 w-full text-center text-emerald-500 font-bold text-3xl">Skills </h1>
