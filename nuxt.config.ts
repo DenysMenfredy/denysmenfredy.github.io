@@ -28,10 +28,12 @@ export default defineNuxtConfig({
           langs: ['js', 'ts', 'vue', 'json', 'yaml', 'bash', 'css', 'html', 'cpp', 'python', 'java', 'c']
         }
       }
+    },
+    renderer: {
+      anchorLinks: false
     }
   },
   modules: ['nuxt-content-git', 'nuxt-icon', "@nuxt/image", "@nuxt/content", '@nuxtjs/color-mode'],
-  // @ts-expect-error color-mode module augments Nuxt config at runtime
   colorMode: {
     classSuffix: '',
     preference: 'system',
