@@ -24,3 +24,4 @@ logs
 
 # View tracking data
 data/views.json
+test-subfolder-content.js
