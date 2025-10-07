@@ -26,7 +26,7 @@
         </header>
         
         <!-- Post Content -->
-        <div class="prose prose-lg max-w-none dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-slate-100 prose-headings:font-bold prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 dark:prose-strong:text-slate-100 prose-code:text-emerald-600 dark:prose-code:text-emerald-400 prose-code:bg-gray-100 dark:prose-code:bg-stone-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 dark:prose-pre:bg-stone-900 prose-pre:text-gray-100 prose-blockquote:border-emerald-500 dark:prose-blockquote:border-emerald-600 prose-blockquote:bg-emerald-50 dark:prose-blockquote:bg-stone-800 prose-blockquote:border-l-4 prose-blockquote:pl-4 prose-blockquote:py-2 prose-ul:text-gray-700 dark:prose-ul:text-gray-300 prose-ol:text-gray-700 dark:prose-ol:text-gray-300 prose-li:text-gray-700 dark:prose-li:text-gray-300">
+        <div class="prose prose-lg max-w-none dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-slate-100 prose-headings:font-bold prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-strong:text-gray-900 dark:prose-strong:text-slate-100 prose-code:text-emerald-600 dark:prose-code:text-emerald-400 prose-code:bg-gray-100 dark:prose-code:bg-stone-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 dark:prose-pre:bg-stone-900 prose-pre:text-gray-100 prose-blockquote:border-emerald-500 dark:prose-blockquote:border-emerald-600 prose-blockquote:bg-emerald-50 dark:prose-blockquote:bg-stone-800 prose-blockquote:border-l-4 prose-blockquote:pl-4 prose-blockquote:py-2 prose-ul:text-gray-700 dark:prose-ul:text-gray-300 prose-ol:text-gray-700 dark:prose-ol:text-gray-300 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-a:text-emerald-600 dark:prose-a:text-emerald-400 hover:prose-a:text-emerald-700 dark:hover:prose-a:text-emerald-300 prose-a:no-underline hover:prose-a:underline">
             <ContentRenderer v-if="page" :value="page" />
         </div>
         
@@ -111,3 +111,45 @@
         }
     })
 </script>
+
+<style scoped>
+/* Fix for markdown headers not being treated as links */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.prose h1:hover,
+.prose h2:hover,
+.prose h3:hover,
+.prose h4:hover,
+.prose h5:hover,
+.prose h6:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Ensure only actual links get link styling */
+.prose a:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a) {
+    color: rgb(16 185 129) !important; /* emerald-500 */
+    text-decoration: none;
+}
+
+.prose a:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):hover {
+    color: rgb(5 150 105) !important; /* emerald-600 */
+    text-decoration: underline;
+}
+
+.dark .prose a:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a) {
+    color: rgb(16 185 129) !important; /* emerald-500 */
+}
+
+.dark .prose a:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a):hover {
+    color: rgb(34 197 94) !important; /* emerald-400 */
+}
+</style>
