@@ -29,6 +29,7 @@
   "dependencies": {
     "@nuxt/content": "^3.6.3",
     "better-sqlite3": "^12.2.0",
-    "npm-check-updates": "^18.0.2"
+    "npm-check-updates": "^18.0.2",
+    "nuxt-content-git": "^6.0.1"
   }
 }
