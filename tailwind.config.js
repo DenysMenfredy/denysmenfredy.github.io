@@ -15,13 +15,44 @@ export default {
             'bg-black': '#020202',
             'green-darker': '#0D2818',
             'green-dark': '#04471C',
-            'green': '#058C42',
+            'green': '#059669',
             'green-light': '#16DB65'
-        }
+        },
+        typography: () => ({
+            DEFAULT: {
+                css: {
+                    pre: {
+                        'background-color': '#22272e',
+                        color: '#059669',
+                    },
+                    'code::before': {
+                        content: '""',
+                    },
+                    'code::after': {
+                        content: '""',
+                    },
+                    code: {
+                        'background-color': '#22272e',
+                        color: '#059669',
+                    },
+                },
+            },
+            invert: {
+                css: {
+                    pre: {
+                        'background-color': '#292524',
+                        color: '#059669',
+                    },
+                    code: {
+                        'background-color': '#292524',
+                        color: '#059669',
+                    },
+                },
+            },
+        }),
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
   ],
 }
-

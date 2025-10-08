@@ -1,22 +1,20 @@
 ---
-title: 'Basic data types in programming'
-description: 'The basic and fundamentals data types in programming.'
+title: 'Basic Data Types: Strings'
+description: 'strings definition and manipulation.'
 tags: ['coding', 'data structures']
 ---
 
-# Basic data types:
-
-Let's take a look at the basic programming data types, implemented on the majority of programming languages. Learning these types is fundamental to master coding.
-
-## Strings:
+# Strings:
 A string is a data type that represents text. Think of it as a sequence of characters (letters, numbers, symbols, or spaces) grouped together.
+
+>*Note: The code presented here is for the programming language Python*
 
 **Examples:**
 - `"Hello, World!"`
 - `"123"`
 - `"user@email.com"`
 
-### Creating Strings
+## Creating Strings
 
 Strings are created by wrapping text in quotes:
 
@@ -27,9 +25,9 @@ message = 'Hello there'
 
 Most languages accept both single (`'`) and double (`"`) quotes.
 
-### Common String Operations
+## Common String Operations
 
-#### Concatenation (Joining Strings)
+### Concatenation (Joining Strings)
 Combining two or more strings together:
 ```
 first_name = "John"
@@ -37,14 +35,14 @@ last_name = "Doe"
 full_name = first_name + " " + last_name  # Result: "John Doe"
 ```
 
-#### Length
+### Length
 Finding how many characters are in a string:
 ```
 message = "Hello"
 length = len(message)  # Result: 5
 ```
 
-#### Accessing Characters
+### Accessing Characters
 Strings are indexed, meaning each character has a position (starting at 0):
 ```
 word = "Python"
@@ -52,7 +50,7 @@ first_letter = word[0]   # Result: "P"
 third_letter = word[2]   # Result: "t"
 ```
 
-#### Case Conversion
+### Case Conversion
 Changing text to uppercase or lowercase:
 ```
 text = "Hello World"
@@ -60,7 +58,9 @@ upper = text.upper()     # Result: "HELLO WORLD"
 lower = text.lower()     # Result: "hello world"
 ```
 
-### Special Characters
+*For more string operations in Python, [see](https://docs.python.org/3/library/string.html).*
+
+## Special Characters
 
 Some characters need special notation:
 
@@ -74,7 +74,7 @@ Some characters need special notation:
 message = "Line 1\nLine 2"
 ```
 
-### String Immutability
+## String Immutability
 
 Strings cannot be changed after creation. When you modify a string, you're actually creating a new one:
 
@@ -83,7 +83,7 @@ word = "Hello"
 word = word + " World"  # Creates a NEW string "Hello World"
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 1. **Mixing quote types incorrectly**
    - Wrong: `"Hello'`

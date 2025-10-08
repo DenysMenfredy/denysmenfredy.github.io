@@ -20,13 +20,7 @@ export default defineNuxtConfig({
           depth: 3,
           searchDepth: 3
         },
-        highlight: {
-          theme: {
-            default: 'github-light',
-            dark: 'github-dark'
-          },
-          langs: ['js', 'ts', 'vue', 'json', 'yaml', 'bash', 'css', 'html', 'cpp', 'python', 'java', 'c']
-        }
+        highlight: false
       }
     },
     renderer: {
