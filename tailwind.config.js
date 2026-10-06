@@ -22,8 +22,8 @@ export default {
             DEFAULT: {
                 css: {
                     pre: {
-                        'background-color': '#22272e',
-                        color: '#059669',
+                        'background-color': '#292524',
+                        color: '#d1fae5',
                     },
                     'code::before': {
                         content: '""',
@@ -32,20 +32,20 @@ export default {
                         content: '""',
                     },
                     code: {
-                        'background-color': '#22272e',
-                        color: '#059669',
+                        'background-color': '#e7e5e4',
+                        color: '#065f46',
                     },
                 },
             },
             invert: {
                 css: {
                     pre: {
-                        'background-color': '#292524',
-                        color: '#059669',
+                        'background-color': '#1c1917',
+                        color: '#d1fae5',
                     },
                     code: {
                         'background-color': '#292524',
-                        color: '#059669',
+                        color: '#6ee7b7',
                     },
                 },
             },

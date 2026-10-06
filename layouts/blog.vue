@@ -1,7 +1,9 @@
 <template>
-    <AppHeader />
-    <main class="min-h-screen bg-white dark:bg-stone-900 text-stone-900 dark:text-slate-100">
-        <slot />
-    </main>
-    <AppFooter />
+    <div class="min-h-screen bg-stone-50 font-sans text-stone-900 dark:bg-stone-950 dark:text-stone-100">
+        <AppHeader />
+        <main class="min-h-screen">
+            <slot />
+        </main>
+        <AppFooter />
+    </div>
 </template>

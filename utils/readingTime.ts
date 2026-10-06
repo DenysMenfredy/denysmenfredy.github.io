@@ -32,9 +32,23 @@ export function calculateReadingTime(text: string, wordsPerMinute: number = 200)
  * @param content - The content to extract text from
  * @returns Plain text content
  */
-export function extractTextContent(content: string): string {
-  // Remove markdown syntax
-  let text = content
+export function extractTextContent(content: unknown): string {
+  // Nuxt Content stores rendered Markdown as a Minimark tree.
+  if (Array.isArray(content)) {
+    const children = typeof content[0] === 'string' ? content.slice(2) : content
+    return children.map(extractTextContent).join(' ')
+  }
+
+  if (content && typeof content === 'object') {
+    return extractTextContent((content as { value?: unknown }).value)
+  }
+
+  if (typeof content !== 'string') {
+    return ''
+  }
+
+  // Also support plain Markdown strings.
+  const text = content
     .replace(/#{1,6}\s+/g, '') // Remove headers
     .replace(/\*\*(.*?)\*\*/g, '$1') // Remove bold
     .replace(/\*(.*?)\*/g, '$1') // Remove italic

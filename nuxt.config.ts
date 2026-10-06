@@ -27,7 +27,7 @@ export default defineNuxtConfig({
       anchorLinks: false
     }
   },
-  modules: ['nuxt-content-git', 'nuxt-icon', "@nuxt/image", "@nuxt/content", '@nuxtjs/color-mode'],
+  modules: ['nuxt-icon', "@nuxt/image", "@nuxt/content", '@nuxtjs/color-mode'],
   colorMode: {
     classSuffix: '',
     preference: 'system',
