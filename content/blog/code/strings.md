@@ -1,10 +1,11 @@
 ---
 title: 'Basic Data Types: Strings'
-description: 'strings definition and manipulation.'
-tags: ['coding', 'data structures']
+description: 'A practical introduction to Python strings, including indexing, common operations, and mistakes.'
+publishedAt: '2025-10-08T01:02:01-03:00'
+tags: ['python', 'fundamentals']
 ---
 
-# Strings:
+## What is a string?
 A string is a data type that represents text. Think of it as a sequence of characters (letters, numbers, symbols, or spaces) grouped together.
 
 >*Note: The code presented here is for the programming language Python*

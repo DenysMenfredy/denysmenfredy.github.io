@@ -27,10 +27,12 @@
                     <button
                         class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500 transition-colors duration-200 text-stone-700 hover:text-emerald-600 hover:bg-stone-100 dark:text-slate-100 dark:hover:text-emerald-400 dark:hover:bg-stone-800"
                         @click="toggleColorMode"
-                        :aria-label="`Switch to ${colorMode.value === 'dark' ? 'light' : 'dark'} mode`"
+                        aria-label="Toggle color mode"
                     >
-                        <Icon v-if="colorMode.value === 'dark'" name="uil:sun" size="20" />
-                        <Icon v-else name="uil:moon" size="20" />
+                        <ColorScheme placeholder="◐" tag="span">
+                            <Icon v-if="colorMode.value === 'dark'" name="uil:sun" size="20" />
+                            <Icon v-else name="uil:moon" size="20" />
+                        </ColorScheme>
                     </button>
                 </nav>
 
@@ -39,10 +41,12 @@
                     <button
                         class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500 transition-colors duration-200 text-stone-700 hover:text-emerald-600 hover:bg-stone-100 dark:text-slate-100 dark:hover:text-emerald-400 dark:hover:bg-stone-800"
                         @click="toggleColorMode"
-                        :aria-label="`Switch to ${colorMode.value === 'dark' ? 'light' : 'dark'} mode`"
+                        aria-label="Toggle color mode"
                     >
-                        <Icon v-if="colorMode.value === 'dark'" name="uil:sun" size="20" />
-                        <Icon v-else name="uil:moon" size="20" />
+                        <ColorScheme placeholder="◐" tag="span">
+                            <Icon v-if="colorMode.value === 'dark'" name="uil:sun" size="20" />
+                            <Icon v-else name="uil:moon" size="20" />
+                        </ColorScheme>
                     </button>
                     <button
                         @click="toggleMenu"
@@ -108,7 +112,7 @@ const closeMenu = () => {
 }
 
 const toggleColorMode = () => {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+    colorMode.preference = document.documentElement.classList.contains('dark') ? 'light' : 'dark'
 }
 
 // Close menu on route change
