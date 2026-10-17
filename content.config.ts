@@ -12,6 +12,7 @@ export default defineContentConfig({
         updatedAt: z.date().optional(),
         tags: z.array(z.string().min(1)).default([]),
         image: z.string().optional(),
+        imageAlt: z.string().optional(),
       })
     })
   }
