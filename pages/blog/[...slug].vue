@@ -39,7 +39,7 @@
                     </header>
 
                     <figure v-if="page.image" class="mb-10 overflow-hidden rounded-2xl border border-stone-200 bg-stone-100 dark:border-stone-800 dark:bg-stone-900">
-                        <NuxtImg :src="page.image" :alt="page.title" class="aspect-video w-full object-cover" />
+                        <NuxtImg :src="page.image" :alt="page.imageAlt || page.title" width="1600" height="900" class="aspect-video w-full object-cover" />
                     </figure>
 
                     <div class="prose prose-lg max-w-none text-stone-800 prose-headings:scroll-mt-24 prose-headings:text-stone-950 prose-a:text-emerald-700 prose-pre:overflow-x-auto dark:prose-invert dark:text-stone-200 dark:prose-headings:text-stone-50 dark:prose-a:text-emerald-400">
@@ -144,9 +144,13 @@ useSeoMeta({
     ogTitle: () => page.value?.title,
     ogDescription: () => page.value?.description,
     ogType: 'article',
+    ogImage: () => page.value?.image ? new URL(page.value.image, 'https://denysmenfredy.github.io').href : undefined,
+    ogImageAlt: () => page.value?.imageAlt || page.value?.title,
     articlePublishedTime: () => page.value?.publishedAt ? String(page.value.publishedAt) : undefined,
     articleModifiedTime: () => page.value?.updatedAt ? String(page.value.updatedAt) : undefined,
-    twitterCard: 'summary',
+    twitterCard: () => page.value?.image ? 'summary_large_image' : 'summary',
+    twitterImage: () => page.value?.image ? new URL(page.value.image, 'https://denysmenfredy.github.io').href : undefined,
+    twitterImageAlt: () => page.value?.imageAlt || page.value?.title,
 })
 
 useHead({ meta: [{ name: 'author', content: 'Denys Menfredy' }] })

@@ -20,6 +20,7 @@ tags: ['search', 'full-stack']
 | `publishedAt` | Yes | Original publication time in ISO 8601 format with a timezone. The blog sorts by this value and displays dates in Belém time. |
 | `updatedAt` | No | Time of a substantive revision, in the same format. Do not change `publishedAt` when updating a post. |
 | `tags` | No | A short list of topics; defaults to an empty list. |
-| `image` | No | Reserved for a future post image. |
+| `image` | No | Cover image path under `public/`, for example `/images/blog/my-post/cover.webp`. Shown above the article and used in social previews. |
+| `imageAlt` | No | A concise description of the cover image for screen readers; falls back to the post title. |
 
 The page template renders the post title as its `h1`, so begin the Markdown body with a paragraph or an `##` heading. Check that dates and descriptions are accurate before publishing.
