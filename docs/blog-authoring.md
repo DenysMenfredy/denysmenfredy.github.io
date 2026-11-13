@@ -24,3 +24,16 @@ tags: ['search', 'full-stack']
 | `imageAlt` | No | A concise description of the cover image for screen readers; falls back to the post title. |
 
 The page template renders the post title as its `h1`, so begin the Markdown body with a paragraph or an `##` heading. Check that dates and descriptions are accurate before publishing.
+
+## Code blocks
+
+Specify the language after the opening fence to enable syntax highlighting:
+
+````markdown
+```python
+message = "Hello, World!"
+print(message)
+```
+````
+
+The blog uses Shiki with GitHub light and dark themes that follow the site's color-mode toggle. Bundled languages include `typescript`, `javascript`, `python`, `sql`, `bash`, `json`, `html`, `css`, and `vue`. Add other languages to `content.build.markdown.highlight.langs` in `nuxt.config.ts` before using them. Unlabeled fences and `text` blocks remain plain text.

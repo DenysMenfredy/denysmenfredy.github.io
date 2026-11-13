@@ -19,7 +19,7 @@ A string is a data type that represents text. Think of it as a sequence of chara
 
 Strings are created by wrapping text in quotes:
 
-```
+```python
 name = "Alice"
 message = 'Hello there'
 ```
@@ -30,7 +30,7 @@ Most languages accept both single (`'`) and double (`"`) quotes.
 
 ### Concatenation (Joining Strings)
 Combining two or more strings together:
-```
+```python
 first_name = "John"
 last_name = "Doe"
 full_name = first_name + " " + last_name  # Result: "John Doe"
@@ -38,14 +38,14 @@ full_name = first_name + " " + last_name  # Result: "John Doe"
 
 ### Length
 Finding how many characters are in a string:
-```
+```python
 message = "Hello"
 length = len(message)  # Result: 5
 ```
 
 ### Accessing Characters
 Strings are indexed, meaning each character has a position (starting at 0):
-```
+```python
 word = "Python"
 first_letter = word[0]   # Result: "P"
 third_letter = word[2]   # Result: "t"
@@ -53,7 +53,7 @@ third_letter = word[2]   # Result: "t"
 
 ### Case Conversion
 Changing text to uppercase or lowercase:
-```
+```python
 text = "Hello World"
 upper = text.upper()     # Result: "HELLO WORLD"
 lower = text.lower()     # Result: "hello world"
@@ -71,7 +71,7 @@ Some characters need special notation:
 - `\"` - Quote mark inside a string
 
 **Example:**
-```
+```python
 message = "Line 1\nLine 2"
 ```
 
@@ -79,7 +79,7 @@ message = "Line 1\nLine 2"
 
 Strings cannot be changed after creation. When you modify a string, you're actually creating a new one:
 
-```
+```python
 word = "Hello"
 word = word + " World"  # Creates a NEW string "Hello World"
 ```
