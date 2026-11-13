@@ -22,8 +22,9 @@ export default {
             DEFAULT: {
                 css: {
                     pre: {
-                        'background-color': '#292524',
-                        color: '#d1fae5',
+                        'background-color': '#f6f8fa',
+                        color: '#24292e',
+                        border: '1px solid #d0d7de',
                     },
                     'code::before': {
                         content: '""',
@@ -40,8 +41,9 @@ export default {
             invert: {
                 css: {
                     pre: {
-                        'background-color': '#1c1917',
-                        color: '#d1fae5',
+                        'background-color': '#24292e',
+                        color: '#e1e4e8',
+                        'border-color': '#444d56',
                     },
                     code: {
                         'background-color': '#292524',
